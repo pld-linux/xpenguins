@@ -3,7 +3,7 @@ Summary(pl):	Ma³e pingwiny chodz±ce po okienkach
 Summary(pt_BR):	Pinguins que andam sobre as bordas de suas janelas
 Name:		xpenguins
 Version:	2.2
-Release:	5
+Release:	6
 License:	GPL
 Group:		X11/Amusements
 Source0:	http://xpenguins.seul.org/%{name}-%{version}.tar.gz
@@ -15,7 +15,6 @@ BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 This program animates a friendly family of penguins in your root
@@ -38,7 +37,6 @@ por outras áreas.
 %setup -q
 
 %build
-rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
@@ -47,13 +45,13 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Amusements}
+install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
-install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Amusements
+install %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -65,4 +63,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/xpenguins
 %{_mandir}/man1/*
 %{_pixmapsdir}/*
-%{_applnkdir}/Amusements/*
+%{_desktopdir}/*.desktop
