@@ -5,7 +5,7 @@ Release:	3
 License:	GPL
 Group:		X11/Amusements
 Group(pl):	X11/Rozrywka	
-Source0:	http://www.met.rdg.ac.uk/~swrhgnrj/xpenguins/%{name}-%{version}-%{release}.tar.gz
+Source0:	http://www.met.rdg.ac.uk/~swrhgnrj/xpenguins/%{name}-%{version}.tar.gz
 URL:		http://www.met.rdg.ac.uk/~swrhgnrj/xpenguins/
 BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
