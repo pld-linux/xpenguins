@@ -1,41 +1,40 @@
-Summary:	Cute little penguins that walk along the tops of your windows.
+Summary:	Cute little penguins that walk along the tops of your windows
 Name:		xpenguins
-Version:	1.1
-Release:	3
+Version:	1.2
+Release:	1
 License:	GPL
 Group:		X11/Amusements
-Group(pl):	X11/Rozrywka	
+Group(de):	X11/Unterhaltung
+Group(pl):	X11/Rozrywka
 Source0:	http://www.met.rdg.ac.uk/~swrhgnrj/xpenguins/%{name}-%{version}.tar.gz
 URL:		http://www.met.rdg.ac.uk/~swrhgnrj/xpenguins/
 BuildRequires:	XFree86-devel
-BuildRequires:	xpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
 
 %description
-This program animates a friendly family of penguins in your root window.
-They drop in from the top of the screen, walk along the tops of your
-windows, up the side of your windows, up the side of the screen, and
-sometimes even levitate with their genetically-modified go-go-gadget
-'copter ability.
+This program animates a friendly family of penguins in your root
+window. They drop in from the top of the screen, walk along the tops
+of your windows, up the side of your windows, up the side of the
+screen, and sometimes even levitate with their genetically-modified
+go-go-gadget 'copter ability.
 
 %prep
 %setup -q
 
 %build
-%{__make} CFLAGS="$RPM_OPT_FLAGS"
+%{__make} CFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/{%{_bindir},%{_mandir}/man1}
 
-install -s xpenguins $RPM_BUILD_ROOT%{_bindir}/xpenguins
+install xpenguins $RPM_BUILD_ROOT%{_bindir}/xpenguins
 install xpenguins.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf README AUTHORS \
-	$RPM_BUILD_ROOT%{_mandir}/man1/*
+gzip -9nf README AUTHORS
 
 %clean
 rm -rf $RPM_BUILD_ROOT
