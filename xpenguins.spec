@@ -1,6 +1,6 @@
 Summary:	Cute little penguins that walk along the tops of your windows
 Name:		xpenguins
-Version:	2.1
+Version:	2.2
 Release:	1
 License:	GPL
 Group:		X11/Amusements
