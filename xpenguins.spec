@@ -25,12 +25,20 @@ sometimes even levitate with their genetically-modified go-go-gadget
 make CFLAGS="$RPM_OPT_FLAGS"
 
 %install
+rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/{%{_bindir},%{_mandir}/man1}
+
 install -s xpenguins $RPM_BUILD_ROOT%{_bindir}/xpenguins
 install xpenguins.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
+gzip -9nf README AUTHORS \
+	$RPM_BUILD_ROOT%{_mandir}/man1/*
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %files
 %defattr(644,root,root,755)
-%doc README AUTHORS
+%doc *.gz
 %attr(755,root,root) %{_bindir}/xpenguins
-%{_mandir}/man1/xpenguins.1
+%{_mandir}/man1/*
