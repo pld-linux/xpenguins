@@ -2,12 +2,14 @@ Summary:	Cute little penguins that walk along the tops of your windows
 Summary(pl):	Ma³e pingwiny chodz±ce po okienkach
 Name:		xpenguins
 Version:	2.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Amusements
 Group(de):	X11/Unterhaltung
 Group(pl):	X11/Rozrywka
 Source0:	http://xpenguins.seul.org/%{name}-%{version}.tar.gz
+Source1:	%{name}.png
+Source2:	%{name}.desktop
 URL:		http://xpenguins.seul.org/
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
@@ -48,6 +50,10 @@ rm -rf $RPM_BUILD_ROOT
 
 gzip -9nf NEWS README AUTHORS ChangeLog
 
+install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Amusements}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
+install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Amusements
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -57,3 +63,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/xpenguins
 %{_datadir}/xpenguins
 %{_mandir}/man1/*
+%{_pixmapsdir}/*
+%{_applnkdir}/Amusements/*
