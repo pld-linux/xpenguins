@@ -34,7 +34,7 @@ okienek, czasem nawet lewituj± korzystaj±c z wszczepionego koptera.
 
 %build
 rm -f missing
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
