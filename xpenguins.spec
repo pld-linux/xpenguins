@@ -1,8 +1,9 @@
 Summary:	Cute little penguins that walk along the tops of your windows
 Summary(pl):	Ma³e pingwiny chodz±ce po okienkach
+Summary(pt_BR):	Pinguins que andam sobre as bordas de suas janelas
 Name:		xpenguins
 Version:	2.2
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Amusements
 Source0:	http://xpenguins.seul.org/%{name}-%{version}.tar.gz
@@ -28,6 +29,11 @@ go-go-gadget 'copter ability.
 Ten program wy¶wietla animacjê przyjaznej rodziny pingwinów w g³ównym
 oknie. Pingwiny spadaj± z góry ekranu, chodz± po górnych krawêdziach
 okienek, czasem nawet lewituj± korzystaj±c z wszczepionego koptera.
+
+%description -l pt_BR
+Este programa mostra uma família de pinguins em sua janela principal.
+Eles aparecem pelo topo da tela, caminham até o topo de suas janelas e
+por outras áreas.
 
 %prep
 %setup -q
