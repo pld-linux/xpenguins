@@ -7,6 +7,8 @@ Group:		X11/Amusements
 Group(pl):	X11/Rozrywka	
 Source0:	http://www.met.rdg.ac.uk/~swrhgnrj/xpenguins/%{name}-%{version}-%{release}.tar.gz
 URL:		http://www.met.rdg.ac.uk/~swrhgnrj/xpenguins/
+BuildRequires:	XFree86-devel
+BuildRequires:	xpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
