@@ -36,7 +36,7 @@ okienek, czasem nawet lewituj± korzystaj±c z wszczepionego koptera.
 rm -f missing
 aclocal
 autoconf
-automake -a -c
+automake -a -c -f
 %configure
 %{__make}
 
