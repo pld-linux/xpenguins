@@ -7,6 +7,7 @@ Release:	5
 License:	GPL
 Group:		X11/Amusements
 Source0:	http://xpenguins.seul.org/%{name}-%{version}.tar.gz
+# Source0-md5:	2ccf555d55f9b0377017322b3b3d27a4
 Source1:	%{name}.png
 Source2:	%{name}.desktop
 URL:		http://xpenguins.seul.org/
