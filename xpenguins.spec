@@ -1,7 +1,7 @@
 Summary:	Cute little penguins that walk along the tops of your windows.
 Name:		xpenguins
 Version:	1.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Amusements
 Group(pl):	X11/Rozrywka	
@@ -12,6 +12,7 @@ BuildRequires:	xpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
 This program animates a friendly family of penguins in your root window.
