@@ -1,6 +1,6 @@
 Summary:	Cute little penguins that walk along the tops of your windows
 Name:		xpenguins
-Version:	2.0
+Version:	2.1
 Release:	1
 License:	GPL
 Group:		X11/Amusements
@@ -9,6 +9,8 @@ Group(pl):	X11/Rozrywka
 Source0:	http://xpenguins.seul.org/%{name}-%{version}.tar.gz
 URL:		http://xpenguins.seul.org/
 BuildRequires:	XFree86-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -25,6 +27,10 @@ go-go-gadget 'copter ability.
 %setup -q
 
 %build
+rm -f missing
+aclocal
+autoconf
+automake -a -c
 %configure
 %{__make}
 
