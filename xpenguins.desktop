@@ -1,8 +1,9 @@
 [Desktop Entry]
 Name=xpenguins
 Comment=Cute little penguins that walk along the tops of your windows
-Comment[pl]=Ma³e pingwiny chodz±ce po okienkach
+Comment[pl]=MaÅ‚e pingwiny chodzÄ…ce po okienkach
 Icon=xpenguins.png
 Exec=/usr/X11R6/bin/xpenguins
 Terminal=0
 Type=Application
+# vi: encoding=utf-8
