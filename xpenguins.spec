@@ -5,8 +5,6 @@ Version:	2.2
 Release:	3
 License:	GPL
 Group:		X11/Amusements
-Group(de):	X11/Unterhaltung
-Group(pl):	X11/Rozrywka
 Source0:	http://xpenguins.seul.org/%{name}-%{version}.tar.gz
 Source1:	%{name}.png
 Source2:	%{name}.desktop
