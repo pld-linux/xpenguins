@@ -3,7 +3,7 @@ Summary(pl):	Ma³e pingwiny chodz±ce po okienkach
 Summary(pt_BR):	Pinguins que andam sobre as bordas de suas janelas
 Name:		xpenguins
 Version:	2.2
-Release:	6
+Release:	7
 License:	GPL
 Group:		X11/Amusements
 Source0:	http://xpenguins.seul.org/%{name}-%{version}.tar.gz
@@ -11,9 +11,10 @@ Source0:	http://xpenguins.seul.org/%{name}-%{version}.tar.gz
 Source1:	%{name}.png
 Source2:	%{name}.desktop
 URL:		http://xpenguins.seul.org/
-BuildRequires:	XFree86-devel
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.59-9
 BuildRequires:	automake
+BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -39,6 +40,7 @@ por outras áreas.
 %build
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
