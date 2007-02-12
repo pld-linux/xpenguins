@@ -1,6 +1,6 @@
 Summary:	Cute little penguins that walk along the tops of your windows
-Summary(pl.UTF-8):   Małe pingwiny chodzące po okienkach
-Summary(pt_BR.UTF-8):   Pinguins que andam sobre as bordas de suas janelas
+Summary(pl.UTF-8):	Małe pingwiny chodzące po okienkach
+Summary(pt_BR.UTF-8):	Pinguins que andam sobre as bordas de suas janelas
 Name:		xpenguins
 Version:	2.2
 Release:	7
