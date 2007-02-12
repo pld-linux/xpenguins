@@ -1,6 +1,6 @@
 Summary:	Cute little penguins that walk along the tops of your windows
-Summary(pl):	Ma³e pingwiny chodz±ce po okienkach
-Summary(pt_BR):	Pinguins que andam sobre as bordas de suas janelas
+Summary(pl.UTF-8):   MaÅ‚e pingwiny chodzÄ…ce po okienkach
+Summary(pt_BR.UTF-8):   Pinguins que andam sobre as bordas de suas janelas
 Name:		xpenguins
 Version:	2.2
 Release:	7
@@ -24,15 +24,15 @@ of your windows, up the side of your windows, up the side of the
 screen, and sometimes even levitate with their genetically-modified
 go-go-gadget 'copter ability.
 
-%description -l pl
-Ten program wy¶wietla animacjê przyjaznej rodziny pingwinów w g³ównym
-oknie. Pingwiny spadaj± z góry ekranu, chodz± po górnych krawêdziach
-okienek, czasem nawet lewituj± korzystaj±c z wszczepionego koptera.
+%description -l pl.UTF-8
+Ten program wyÅ›wietla animacjÄ™ przyjaznej rodziny pingwinÃ³w w gÅ‚Ã³wnym
+oknie. Pingwiny spadajÄ… z gÃ³ry ekranu, chodzÄ… po gÃ³rnych krawÄ™dziach
+okienek, czasem nawet lewitujÄ… korzystajÄ…c z wszczepionego koptera.
 
-%description -l pt_BR
-Este programa mostra uma família de pinguins em sua janela principal.
-Eles aparecem pelo topo da tela, caminham até o topo de suas janelas e
-por outras áreas.
+%description -l pt_BR.UTF-8
+Este programa mostra uma famÃ­lia de pinguins em sua janela principal.
+Eles aparecem pelo topo da tela, caminham atÃ© o topo de suas janelas e
+por outras Ã¡reas.
 
 %prep
 %setup -q
