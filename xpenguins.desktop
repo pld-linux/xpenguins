@@ -2,10 +2,9 @@
 Name=xpenguins
 Comment=Cute little penguins that walk along the tops of your windows
 Comment[pl]=Małe pingwiny chodzące po okienkach
-Icon=xpenguins.png
+Icon=xpenguins
 Exec=xpenguins
 Terminal=false
 Type=Application
-Encoding=UTF-8
 Categories=Amusement;
 # vi: encoding=utf-8
